@@ -1,0 +1,83 @@
+import { Product } from '@/types/product';
+
+export const products: Product[] = [
+  {
+    id: '1',
+    name: 'Béret en laine mérinos',
+    description: 'Béret chaud et doux, parfait pour l\'hiver',
+    price: 35,
+    category: 'accessories',
+    image: 'https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=400&h=400&fit=crop',
+    stock: 10,
+  },
+  {
+    id: '2',
+    name: 'Écharpe torsadée',
+    description: 'Écharpe ample avec motif torsadé classique',
+    price: 45,
+    category: 'accessories',
+    image: 'https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?w=400&h=400&fit=crop',
+    stock: 8,
+  },
+  {
+    id: '3',
+    name: 'Sac crochet boho',
+    description: 'Sac artisanal idéal pour l\'été',
+    price: 55,
+    category: 'accessories',
+    image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=400&fit=crop',
+    stock: 5,
+  },
+  {
+    id: '4',
+    name: 'Pull oversize',
+    description: 'Pull confortable avec manches larges',
+    price: 85,
+    category: 'clothing',
+    image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop',
+    stock: 6,
+  },
+  {
+    id: '5',
+    name: 'Gilet sans manches',
+    description: 'Gilet léger pour les mi-saisons',
+    price: 65,
+    category: 'clothing',
+    image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=400&fit=crop',
+    stock: 7,
+  },
+  {
+    id: '6',
+    name: 'Top cropped',
+    description: 'Top élégant pour l\'été',
+    price: 40,
+    category: 'clothing',
+    image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&h=400&fit=crop',
+    stock: 12,
+  },
+  {
+    id: '7',
+    name: 'Couverture unique',
+    description: 'Pièce collector, créée en édition limitée',
+    price: 150,
+    category: 'unique',
+    image: 'https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=400&h=400&fit=crop',
+    stock: 1,
+  },
+  {
+    id: '8',
+    name: 'Ensemble bébé',
+    description: 'Ensemble complet fait main pour bébé',
+    price: 75,
+    category: 'unique',
+    image: 'https://images.unsplash.com/photo-1519689680058-324335c77eba?w=400&h=400&fit=crop',
+    stock: 3,
+  },
+];
+
+export const categories = [
+  { id: 'all', name: 'Tous' },
+  { id: 'accessories', name: 'Accessoires' },
+  { id: 'clothing', name: 'Vêtements' },
+  { id: 'unique', name: 'Pièces uniques' },
+];
