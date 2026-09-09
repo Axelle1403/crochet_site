@@ -1,30 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
 export const metadata: Metadata = {
-  title: "[Nom de la marque] - Créations en crochet",
+  title: "Human Hands - Créations en crochet",
   description: "Vêtements et accessoires en crochet faits main avec amour par trois créatrices passionnées.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html
-      lang="fr"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
-    >
-      <body className="min-h-full flex flex-col">
+    <html lang="fr" className="h-full antialiased">
+      <body className="min-h-full flex flex-col font-sans">
         <CartProvider>{children}</CartProvider>
       </body>
     </html>
