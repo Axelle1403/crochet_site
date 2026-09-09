@@ -12,7 +12,7 @@ export default function Home() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[80vh] flex items-center justify-center bg-gradient-to-b from-primary/10 to-background">
+      <section className="relative h-[70vh] flex items-center justify-center bg-background">
         <motion.div 
           className="text-center px-4"
           initial={{ opacity: 0, y: 20 }}
@@ -20,20 +20,20 @@ export default function Home() {
           transition={{ duration: 0.8 }}
         >
           <motion.div 
-            className="mb-8 flex justify-center"
+            className="mb-12 flex justify-center"
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <Logo className="h-24 w-auto" />
+            <Logo className="h-32 w-auto" />
           </motion.div>
           <motion.p 
-            className="text-xl md:text-2xl text-muted-foreground mb-8"
+            className="text-2xl md:text-3xl text-foreground mb-12 font-light tracking-wide"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            L'art du crochet, fait main avec amour
+            L'authenticité au bout des doigts
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -42,9 +42,9 @@ export default function Home() {
           >
             <Link
               href="/catalog"
-              className="inline-block bg-primary text-primary-foreground px-8 py-3 rounded-full text-lg font-medium hover:bg-primary/90 transition-colors"
+              className="inline-block bg-primary text-primary-foreground px-10 py-4 rounded-none text-lg font-normal tracking-wider hover:bg-primary/90 transition-colors"
             >
-              Découvrir la collection
+              DÉCOUVRIR
             </Link>
           </motion.div>
         </motion.div>

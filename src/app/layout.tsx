@@ -3,8 +3,8 @@ import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 
 export const metadata: Metadata = {
-  title: "Human Hands - Créations en crochet",
-  description: "Vêtements et accessoires en crochet faits main avec amour par trois créatrices passionnées.",
+  title: "Les 2H - Créations en crochet",
+  description: "L'authenticité au bout des doigts - Créations artisanales uniques en crochet.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
