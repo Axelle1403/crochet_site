@@ -17,76 +17,67 @@ export default function LogosPage() {
           Sélectionnez le style qui vous plaît le plus
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {/* Logo 1: Style Shadaf Création - Élégant traditionnel */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {/* Logo 1: Simple typographie */}
           <div className="bg-card p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
             <svg viewBox="0 0 200 200" className="w-full h-auto mb-4">
-              <defs>
-                <linearGradient id="shadafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{stopColor:'#c41e3a',stopOpacity:1}} />
-                  <stop offset="100%" style={{stopColor:'#8B4513',stopOpacity:1}} />
-                </linearGradient>
-              </defs>
-              <rect x="30" y="40" width="140" height="120" rx="5" fill="none" stroke="url(#shadafGrad)" strokeWidth="3" />
-              <rect x="40" y="50" width="120" height="100" rx="3" fill="url(#shadafGrad)" opacity="0.1" />
-              <text x="100" y="95" fontFamily="Georgia, serif" fontSize="36" fontWeight="bold" fill="#1a1a1a" textAnchor="middle">Les</text>
-              <text x="100" y="135" fontFamily="Georgia, serif" fontSize="48" fontWeight="bold" fill="#c41e3a" textAnchor="middle">2H</text>
-              <text x="100" y="175" fontFamily="Arial, sans-serif" fontSize="12" fill="#6b6b6b" textAnchor="middle" letterSpacing="3">CROCHET ARTISANAL</text>
+              <text x="100" y="100" fontFamily="Arial, sans-serif" fontSize="60" fontWeight="bold" fill="#c41e3a" textAnchor="middle">2H</text>
+              <text x="100" y="140" fontFamily="Arial, sans-serif" fontSize="20" fill="#1a1a1a" textAnchor="middle">Les 2H</text>
             </svg>
-            <h3 className="text-xl font-semibold text-foreground mb-2">Style Shadaf Création</h3>
-            <p className="text-muted-foreground">Élégant traditionnel avec cadre</p>
+            <h3 className="text-xl font-semibold text-foreground mb-2">Typographie simple</h3>
+            <p className="text-muted-foreground">Logo minimaliste avec texte</p>
           </div>
 
-          {/* Logo 2: Style MGN EBEN - Moderne tendance */}
+          {/* Logo 2: Ligne horizontale */}
           <div className="bg-card p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
             <svg viewBox="0 0 200 200" className="w-full h-auto mb-4">
-              <defs>
-                <linearGradient id="mgnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{stopColor:'#c41e3a',stopOpacity:1}} />
-                  <stop offset="100%" style={{stopColor:'#ff6b6b',stopOpacity:1}} />
-                </linearGradient>
-              </defs>
-              <circle cx="100" cy="80" r="50" fill="url(#mgnGrad)" />
-              <text x="100" y="85" fontFamily="Arial, sans-serif" fontSize="40" fontWeight="bold" fill="white" textAnchor="middle">2H</text>
-              <text x="100" y="150" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#1a1a1a" textAnchor="middle">Les 2H</text>
-              <text x="100" y="180" fontFamily="Arial, sans-serif" fontSize="10" fill="#6b6b6b" textAnchor="middle" letterSpacing="2">MODE & CRÉATION</text>
+              <text x="100" y="80" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#1a1a1a" textAnchor="middle">LES</text>
+              <text x="100" y="120" fontFamily="Arial, sans-serif" fontSize="50" fontWeight="bold" fill="#c41e3a" textAnchor="middle">2H</text>
+              <line x1="40" y1="140" x2="160" y2="140" stroke="#c41e3a" strokeWidth="3" />
             </svg>
-            <h3 className="text-xl font-semibold text-foreground mb-2">Style MGN EBEN</h3>
-            <p className="text-muted-foreground">Moderne tendance avec cercle</p>
+            <h3 className="text-xl font-semibold text-foreground mb-2">Ligne horizontale</h3>
+            <p className="text-muted-foreground">Logo avec ligne décorative</p>
           </div>
 
-          {/* Logo 3: Style 1Look By Adé - Premium artisanal */}
+          {/* Logo 3: Cercle simple */}
           <div className="bg-card p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
             <svg viewBox="0 0 200 200" className="w-full h-auto mb-4">
-              <defs>
-                <linearGradient id="lookGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{stopColor:'#c41e3a',stopOpacity:1}} />
-                  <stop offset="100%" style={{stopColor:'#d4a574',stopOpacity:1}} />
-                </linearGradient>
-              </defs>
-              <path d="M 100 20 L 180 60 L 180 140 L 100 180 L 20 140 L 20 60 Z" fill="url(#lookGrad)" />
-              <text x="100" y="100" fontFamily="Georgia, serif" fontSize="36" fontWeight="bold" fill="white" textAnchor="middle">2H</text>
-              <text x="100" y="195" fontFamily="Arial, sans-serif" fontSize="14" fontWeight="bold" fill="#1a1a1a" textAnchor="middle">Les 2H</text>
+              <circle cx="100" cy="100" r="60" fill="none" stroke="#c41e3a" strokeWidth="4" />
+              <text x="100" y="105" fontFamily="Arial, sans-serif" fontSize="40" fontWeight="bold" fill="#1a1a1a" textAnchor="middle">2H</text>
             </svg>
-            <h3 className="text-xl font-semibold text-foreground mb-2">Style 1Look By Adé</h3>
-            <p className="text-muted-foreground">Premium artisanal avec hexagone</p>
+            <h3 className="text-xl font-semibold text-foreground mb-2">Cercle simple</h3>
+            <p className="text-muted-foreground">Logo avec cercle minimaliste</p>
           </div>
 
-          {/* Logo 4: Style KANZA - Bogolan africain */}
+          {/* Logo 4: Lettres superposées */}
           <div className="bg-card p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
             <svg viewBox="0 0 200 200" className="w-full h-auto mb-4">
-              <defs>
-                <pattern id="bogolan" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                  <rect width="20" height="20" fill="#d4a574" />
-                  <circle cx="10" cy="10" r="3" fill="#8B4513" />
-                </pattern>
-              </defs>
-              <rect x="30" y="30" width="140" height="140" rx="10" fill="url(#bogolan)" stroke="#8B4513" strokeWidth="3" />
-              <text x="100" y="100" fontFamily="Georgia, serif" fontSize="40" fontWeight="bold" fill="#1a1a1a" textAnchor="middle">Les</text>
-              <text x="100" y="140" fontFamily="Georgia, serif" fontSize="48" fontWeight="bold" fill="#c41e3a" textAnchor="middle">2H</text>
+              <text x="100" y="110" fontFamily="Arial, sans-serif" fontSize="80" fontWeight="bold" fill="#c41e3a" textAnchor="middle">2H</text>
+              <text x="100" y="150" fontFamily="Arial, sans-serif" fontSize="16" fill="#1a1a1a" textAnchor="middle">Les 2H</text>
             </svg>
-            <h3 className="text-xl font-semibold text-foreground mb-2">Style KANZA</h3>
-            <p className="text-muted-foreground">Bogolan africain avec motif</p>
+            <h3 className="text-xl font-semibold text-foreground mb-2">Lettres géantes</h3>
+            <p className="text-muted-foreground">Logo avec lettres XXL</p>
+          </div>
+
+          {/* Logo 5: Rectangle coloré */}
+          <div className="bg-card p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
+            <svg viewBox="0 0 200 200" className="w-full h-auto mb-4">
+              <rect x="40" y="40" width="120" height="80" fill="#c41e3a" />
+              <text x="100" y="90" fontFamily="Arial, sans-serif" fontSize="40" fontWeight="bold" fill="white" textAnchor="middle">2H</text>
+              <text x="100" y="150" fontFamily="Arial, sans-serif" fontSize="18" fill="#1a1a1a" textAnchor="middle">Les 2H</text>
+            </svg>
+            <h3 className="text-xl font-semibold text-foreground mb-2">Rectangle coloré</h3>
+            <p className="text-muted-foreground">Logo avec rectangle rouge</p>
+          </div>
+
+          {/* Logo 6: Point décoratif */}
+          <div className="bg-card p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
+            <svg viewBox="0 0 200 200" className="w-full h-auto mb-4">
+              <circle cx="100" cy="70" r="8" fill="#c41e3a" />
+              <text x="100" y="120" fontFamily="Arial, sans-serif" fontSize="45" fontWeight="bold" fill="#1a1a1a" textAnchor="middle">Les 2H</text>
+            </svg>
+            <h3 className="text-xl font-semibold text-foreground mb-2">Point décoratif</h3>
+            <p className="text-muted-foreground">Logo avec point rouge</p>
           </div>
         </div>
 
