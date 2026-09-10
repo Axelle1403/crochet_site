@@ -16,7 +16,7 @@ export default function Logo({ className = "" }: { className?: string }) {
           textAnchor="middle"
           letterSpacing="2"
         >
-          Les <tspan fill="#8b1a3c">2H</tspan>
+          Les <tspan fill="#c41e3a">2H</tspan>
         </text>
       </svg>
       <svg

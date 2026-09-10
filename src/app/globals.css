@@ -5,17 +5,17 @@
   --foreground: #1a1a1a;
   --card: #ffffff;
   --card-foreground: #1a1a1a;
-  --primary: #8b1a3c;
+  --primary: #c41e3a;
   --primary-foreground: #ffffff;
   --secondary: #d4c4b8;
   --secondary-foreground: #1a1a1a;
-  --accent: #8b1a3c;
+  --accent: #ff6b6b;
   --accent-foreground: #ffffff;
   --muted: #f5f0eb;
   --muted-foreground: #6b6b6b;
   --border: #e8e4e1;
   --input: #e8e4e1;
-  --ring: #8b1a3c;
+  --ring: #c41e3a;
   --radius: 0.5rem;
 }
 
