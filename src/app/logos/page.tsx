@@ -17,101 +17,76 @@ export default function LogosPage() {
           Sélectionnez le style qui vous plaît le plus
         </p>
         
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Logo 1: Image de pelote de laine */}
-          <div className="bg-card p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
-            <div className="w-full h-48 mb-4 flex items-center justify-center bg-gradient-to-br from-primary/10 to-secondary/10 rounded-xl overflow-hidden">
-              <img src="https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=300&h=300&fit=crop" alt="Pelote de laine" className="w-full h-full object-cover" />
-            </div>
-            <h3 className="text-xl font-semibold text-foreground mb-2">Image de pelote</h3>
-            <p className="text-muted-foreground">Logo avec vraie photo de pelote</p>
-          </div>
-
-          {/* Logo 2: Main stylisée */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {/* Logo 1: Style Shadaf Création - Élégant traditionnel */}
           <div className="bg-card p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
             <svg viewBox="0 0 200 200" className="w-full h-auto mb-4">
               <defs>
-                <linearGradient id="handGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <linearGradient id="shadafGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style={{stopColor:'#c41e3a',stopOpacity:1}} />
+                  <stop offset="100%" style={{stopColor:'#8B4513',stopOpacity:1}} />
+                </linearGradient>
+              </defs>
+              <rect x="30" y="40" width="140" height="120" rx="5" fill="none" stroke="url(#shadafGrad)" strokeWidth="3" />
+              <rect x="40" y="50" width="120" height="100" rx="3" fill="url(#shadafGrad)" opacity="0.1" />
+              <text x="100" y="95" fontFamily="Georgia, serif" fontSize="36" fontWeight="bold" fill="#1a1a1a" textAnchor="middle">Les</text>
+              <text x="100" y="135" fontFamily="Georgia, serif" fontSize="48" fontWeight="bold" fill="#c41e3a" textAnchor="middle">2H</text>
+              <text x="100" y="175" fontFamily="Arial, sans-serif" fontSize="12" fill="#6b6b6b" textAnchor="middle" letterSpacing="3">CROCHET ARTISANAL</text>
+            </svg>
+            <h3 className="text-xl font-semibold text-foreground mb-2">Style Shadaf Création</h3>
+            <p className="text-muted-foreground">Élégant traditionnel avec cadre</p>
+          </div>
+
+          {/* Logo 2: Style MGN EBEN - Moderne tendance */}
+          <div className="bg-card p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
+            <svg viewBox="0 0 200 200" className="w-full h-auto mb-4">
+              <defs>
+                <linearGradient id="mgnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" style={{stopColor:'#c41e3a',stopOpacity:1}} />
                   <stop offset="100%" style={{stopColor:'#ff6b6b',stopOpacity:1}} />
                 </linearGradient>
               </defs>
-              <path d="M 60 60 Q 60 30, 90 30 L 110 30 Q 140 30, 140 60 L 140 120 Q 140 150, 110 150 L 90 150 Q 60 150, 60 120 Z" 
-                    fill="url(#handGrad)" />
-              <text x="100" y="100" fontFamily="Arial, sans-serif" fontSize="32" fontWeight="bold" fill="white" textAnchor="middle">2H</text>
-              <text x="100" y="180" fontFamily="Arial, sans-serif" fontSize="18" fontWeight="bold" fill="#1a1a1a" textAnchor="middle">Les 2H</text>
+              <circle cx="100" cy="80" r="50" fill="url(#mgnGrad)" />
+              <text x="100" y="85" fontFamily="Arial, sans-serif" fontSize="40" fontWeight="bold" fill="white" textAnchor="middle">2H</text>
+              <text x="100" y="150" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="#1a1a1a" textAnchor="middle">Les 2H</text>
+              <text x="100" y="180" fontFamily="Arial, sans-serif" fontSize="10" fill="#6b6b6b" textAnchor="middle" letterSpacing="2">MODE & CRÉATION</text>
             </svg>
-            <h3 className="text-xl font-semibold text-foreground mb-2">Main stylisée</h3>
-            <p className="text-muted-foreground">Logo avec forme de main</p>
+            <h3 className="text-xl font-semibold text-foreground mb-2">Style MGN EBEN</h3>
+            <p className="text-muted-foreground">Moderne tendance avec cercle</p>
           </div>
 
-          {/* Logo 3: Cœur artisanal */}
+          {/* Logo 3: Style 1Look By Adé - Premium artisanal */}
           <div className="bg-card p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
             <svg viewBox="0 0 200 200" className="w-full h-auto mb-4">
               <defs>
-                <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                <linearGradient id="lookGrad" x1="0%" y1="0%" x2="100%" y2="100%">
                   <stop offset="0%" style={{stopColor:'#c41e3a',stopOpacity:1}} />
-                  <stop offset="100%" style={{stopColor:'#ff6b6b',stopOpacity:1}} />
+                  <stop offset="100%" style={{stopColor:'#d4a574',stopOpacity:1}} />
                 </linearGradient>
               </defs>
-              <path d="M 100 160 C 100 160, 30 100, 30 70 C 30 40, 60 30, 100 60 C 140 30, 170 40, 170 70 C 170 100, 100 160, 100 160" 
-                    fill="url(#heartGrad)" />
-              <text x="100" y="95" fontFamily="Arial, sans-serif" fontSize="28" fontWeight="bold" fill="white" textAnchor="middle">2H</text>
-              <text x="100" y="185" fontFamily="Arial, sans-serif" fontSize="16" fontWeight="bold" fill="#1a1a1a" textAnchor="middle">Les 2H</text>
+              <path d="M 100 20 L 180 60 L 180 140 L 100 180 L 20 140 L 20 60 Z" fill="url(#lookGrad)" />
+              <text x="100" y="100" fontFamily="Georgia, serif" fontSize="36" fontWeight="bold" fill="white" textAnchor="middle">2H</text>
+              <text x="100" y="195" fontFamily="Arial, sans-serif" fontSize="14" fontWeight="bold" fill="#1a1a1a" textAnchor="middle">Les 2H</text>
             </svg>
-            <h3 className="text-xl font-semibold text-foreground mb-2">Cœur artisanal</h3>
-            <p className="text-muted-foreground">Logo avec cœur stylisé</p>
+            <h3 className="text-xl font-semibold text-foreground mb-2">Style 1Look By Adé</h3>
+            <p className="text-muted-foreground">Premium artisanal avec hexagone</p>
           </div>
 
-          {/* Logo 4: Étoiles créatives */}
+          {/* Logo 4: Style KANZA - Bogolan africain */}
           <div className="bg-card p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
             <svg viewBox="0 0 200 200" className="w-full h-auto mb-4">
               <defs>
-                <linearGradient id="starGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{stopColor:'#c41e3a',stopOpacity:1}} />
-                  <stop offset="100%" style={{stopColor:'#ff6b6b',stopOpacity:1}} />
-                </linearGradient>
+                <pattern id="bogolan" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
+                  <rect width="20" height="20" fill="#d4a574" />
+                  <circle cx="10" cy="10" r="3" fill="#8B4513" />
+                </pattern>
               </defs>
-              <polygon points="100,20 120,80 180,80 130,120 150,180 100,140 50,180 70,120 20,80 80,80" fill="url(#starGrad)" />
-              <text x="100" y="105" fontFamily="Arial, sans-serif" fontSize="24" fontWeight="bold" fill="white" textAnchor="middle">2H</text>
-              <text x="100" y="195" fontFamily="Arial, sans-serif" fontSize="16" fontWeight="bold" fill="#1a1a1a" textAnchor="middle">Les 2H</text>
+              <rect x="30" y="30" width="140" height="140" rx="10" fill="url(#bogolan)" stroke="#8B4513" strokeWidth="3" />
+              <text x="100" y="100" fontFamily="Georgia, serif" fontSize="40" fontWeight="bold" fill="#1a1a1a" textAnchor="middle">Les</text>
+              <text x="100" y="140" fontFamily="Georgia, serif" fontSize="48" fontWeight="bold" fill="#c41e3a" textAnchor="middle">2H</text>
             </svg>
-            <h3 className="text-xl font-semibold text-foreground mb-2">Étoiles créatives</h3>
-            <p className="text-muted-foreground">Logo avec étoile stylisée</p>
-          </div>
-
-          {/* Logo 5: Losange moderne */}
-          <div className="bg-card p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
-            <svg viewBox="0 0 200 200" className="w-full h-auto mb-4">
-              <defs>
-                <linearGradient id="diamondGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{stopColor:'#c41e3a',stopOpacity:1}} />
-                  <stop offset="100%" style={{stopColor:'#ff6b6b',stopOpacity:1}} />
-                </linearGradient>
-              </defs>
-              <polygon points="100,20 180,100 100,180 20,100" fill="url(#diamondGrad)" />
-              <text x="100" y="105" fontFamily="Arial, sans-serif" fontSize="32" fontWeight="bold" fill="white" textAnchor="middle">2H</text>
-              <text x="100" y="195" fontFamily="Arial, sans-serif" fontSize="16" fontWeight="bold" fill="#1a1a1a" textAnchor="middle">Les 2H</text>
-            </svg>
-            <h3 className="text-xl font-semibold text-foreground mb-2">Losange moderne</h3>
-            <p className="text-muted-foreground">Logo avec losange stylisé</p>
-          </div>
-
-          {/* Logo 6: Hexagone tech */}
-          <div className="bg-card p-8 rounded-2xl shadow-xl hover:shadow-2xl transition-shadow">
-            <svg viewBox="0 0 200 200" className="w-full h-auto mb-4">
-              <defs>
-                <linearGradient id="hexGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                  <stop offset="0%" style={{stopColor:'#c41e3a',stopOpacity:1}} />
-                  <stop offset="100%" style={{stopColor:'#ff6b6b',stopOpacity:1}} />
-                </linearGradient>
-              </defs>
-              <polygon points="100,20 170,60 170,140 100,180 30,140 30,60" fill="url(#hexGrad)" />
-              <text x="100" y="105" fontFamily="Arial, sans-serif" fontSize="32" fontWeight="bold" fill="white" textAnchor="middle">2H</text>
-              <text x="100" y="195" fontFamily="Arial, sans-serif" fontSize="16" fontWeight="bold" fill="#1a1a1a" textAnchor="middle">Les 2H</text>
-            </svg>
-            <h3 className="text-xl font-semibold text-foreground mb-2">Hexagone tech</h3>
-            <p className="text-muted-foreground">Logo avec hexagone stylisé</p>
+            <h3 className="text-xl font-semibold text-foreground mb-2">Style KANZA</h3>
+            <p className="text-muted-foreground">Bogolan africain avec motif</p>
           </div>
         </div>
 
