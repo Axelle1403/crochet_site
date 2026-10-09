@@ -2,39 +2,49 @@ export default function Logo({ className = "" }: { className?: string }) {
   return (
     <div className={`flex flex-col items-center ${className}`}>
       <svg
-        viewBox="0 0 200 60"
-        className="w-48 h-14"
+        viewBox="0 0 400 120"
+        className="w-64 h-20"
         xmlns="http://www.w3.org/2000/svg"
       >
+        <defs>
+          <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style={{stopColor:'#e91e63',stopOpacity:1}} />
+            <stop offset="100%" style={{stopColor:'#ff4081',stopOpacity:1}} />
+          </linearGradient>
+          <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="2" dy="2" stdDeviation="2" floodOpacity="0.2"/>
+          </filter>
+        </defs>
         <text
-          x="100"
-          y="35"
+          x="200"
+          y="70"
           fontFamily="Arial, sans-serif"
-          fontSize="32"
+          fontSize="64"
           fontWeight="bold"
-          fill="#1a1a1a"
+          fill="#0d0d0d"
           textAnchor="middle"
-          letterSpacing="2"
+          letterSpacing="4"
+          filter="url(#shadow)"
         >
-          Les <tspan fill="#c41e3a">2H</tspan>
+          Les <tspan fill="url(#logoGradient)">2H</tspan>
         </text>
       </svg>
       <svg
-        viewBox="0 0 200 20"
-        className="w-48 h-5"
+        viewBox="0 0 400 30"
+        className="w-64 h-6"
         xmlns="http://www.w3.org/2000/svg"
       >
         <text
-          x="100"
-          y="15"
+          x="200"
+          y="22"
           fontFamily="Arial, sans-serif"
-          fontSize="12"
-          fontWeight="normal"
-          fill="#6b6b6b"
+          fontSize="16"
+          fontWeight="500"
+          fill="#4a4a4a"
           textAnchor="middle"
-          letterSpacing="1"
+          letterSpacing="3"
         >
-          Humans Hand's
+          L'AUTHENTICITÉ AU BOUT DES DOIGTS
         </text>
       </svg>
     </div>
