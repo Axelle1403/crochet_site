@@ -47,8 +47,8 @@ export default function AboutPage() {
             </div>
             <div className="aspect-square bg-secondary rounded-lg flex items-center justify-center overflow-hidden">
               <img
-                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=600&h=600&fit=crop"
-                alt="Les trois créatrices"
+                src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=600&h=600&fit=crop"
+                alt="Créations en crochet"
                 className="w-full h-full object-cover"
               />
             </div>

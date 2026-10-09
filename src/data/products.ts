@@ -7,7 +7,7 @@ export const products: Product[] = [
     description: 'Béret chaud et doux, parfait pour l\'hiver',
     price: 35,
     category: 'accessories',
-    image: 'https://images.unsplash.com/photo-1576871337632-b9aef4c17ab9?w=400&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=400&h=400&fit=crop',
     stock: 10,
   },
   {
@@ -16,7 +16,7 @@ export const products: Product[] = [
     description: 'Écharpe ample avec motif torsadé classique',
     price: 45,
     category: 'accessories',
-    image: 'https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?w=400&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7?w=400&h=400&fit=crop',
     stock: 8,
   },
   {
@@ -25,7 +25,7 @@ export const products: Product[] = [
     description: 'Sac artisanal idéal pour l\'été',
     price: 55,
     category: 'accessories',
-    image: 'https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=400&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1590874103328-2714f6b6c3b4?w=400&h=400&fit=crop',
     stock: 5,
   },
   {
@@ -34,7 +34,7 @@ export const products: Product[] = [
     description: 'Pull confortable avec manches larges',
     price: 85,
     category: 'clothing',
-    image: 'https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=400&h=400&fit=crop',
     stock: 6,
   },
   {
@@ -43,7 +43,7 @@ export const products: Product[] = [
     description: 'Gilet léger pour les mi-saisons',
     price: 65,
     category: 'clothing',
-    image: 'https://images.unsplash.com/photo-1591047139829-d91aecb6caea?w=400&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1620799140408-edc6dcb6d633?w=400&h=400&fit=crop',
     stock: 7,
   },
   {
@@ -52,7 +52,7 @@ export const products: Product[] = [
     description: 'Top élégant pour l\'été',
     price: 40,
     category: 'clothing',
-    image: 'https://images.unsplash.com/photo-1509631179647-0177331693ae?w=400&h=400&fit=crop',
+    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=400&h=400&fit=crop',
     stock: 12,
   },
   {
