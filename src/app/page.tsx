@@ -15,7 +15,7 @@ export default function Home() {
       <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=1920&h=1080&fit=crop"
+            src="https://images.pexels.com/photos/36657253/pexels-photo-36657253/free-photo-fashionable-woman-showcasing-crochet-outfits.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
             alt="Crochet vêtements"
             className="w-full h-full object-cover"
           />
@@ -115,19 +115,19 @@ export default function Home() {
                 name: 'Béret en laine mérinos',
                 description: 'Chaud et doux',
                 price: 35,
-                image: 'https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=600&h=600&fit=crop',
+                image: 'https://images.pexels.com/photos/31701717/pexels-photo-31701717/free-photo-fashionable-woman-in-bright-crochet-top.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
               },
               {
                 name: 'Écharpe torsadée',
                 description: 'Ample et confortable',
                 price: 45,
-                image: 'https://images.unsplash.com/photo-1606841837239-c5a1a4a07af7?w=600&h=600&fit=crop',
+                image: 'https://images.pexels.com/photos/36657253/pexels-photo-36657253/free-photo-fashionable-woman-showcasing-crochet-outfits.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
               },
               {
                 name: 'Sac crochet boho',
                 description: 'Artisanal unique',
                 price: 55,
-                image: 'https://images.unsplash.com/photo-1590874103328-2714f6b6c3b4?w=600&h=600&fit=crop',
+                image: 'https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=600&h=600&fit=crop',
               },
             ].map((item, index) => (
               <motion.div
