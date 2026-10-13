@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Navigation from '@/components/navigation';
 import Logo from '@/components/logo';
 import Footer from '@/components/footer';
+import WhatsAppButton from '@/components/whatsapp-button';
 import { motion } from 'framer-motion';
 
 export default function Home() {
@@ -12,16 +13,8 @@ export default function Home() {
       <Navigation />
       
       {/* Hero Section */}
-      <section className="relative h-[85vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://images.pexels.com/photos/36657253/pexels-photo-36657253/free-photo-fashionable-woman-showcasing-crochet-outfits.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&fit=crop"
-            alt="Crochet vêtements"
-            className="w-full h-full object-cover"
-          />
-          <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/30 to-black/60"></div>
-        </div>
-        <motion.div 
+      <section className="relative h-[85vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-primary/20 to-background">
+        <motion.div
           className="relative z-10 text-center px-4"
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
@@ -112,22 +105,22 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               {
-                name: 'Béret en laine mérinos',
-                description: 'Chaud et doux',
-                price: 35,
-                image: 'https://images.pexels.com/photos/31701717/pexels-photo-31701717/free-photo-fashionable-woman-in-bright-crochet-top.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+                name: 'Top crochet',
+                description: 'Élégant et confortable',
+                price: 20000,
+                image: '/Crochet top.jpeg',
               },
               {
-                name: 'Écharpe torsadée',
-                description: 'Ample et confortable',
-                price: 45,
-                image: 'https://images.pexels.com/photos/36657253/pexels-photo-36657253/free-photo-fashionable-woman-showcasing-crochet-outfits.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop',
+                name: 'Gr A Ce',
+                description: 'Pièce unique artisanale',
+                price: 35000,
+                image: '/Gr A Ce.jpeg',
               },
               {
-                name: 'Sac crochet boho',
+                name: 'Sac crochet',
                 description: 'Artisanal unique',
-                price: 55,
-                image: 'https://images.unsplash.com/photo-1576871337622-98d48d1cf531?w=600&h=600&fit=crop',
+                price: 25000,
+                image: '/Crochet bag.jpeg',
               },
             ].map((item, index) => (
               <motion.div
@@ -152,8 +145,8 @@ export default function Home() {
                 <div className="p-6">
                   <h3 className="font-bold text-foreground mb-2 text-lg">{item.name}</h3>
                   <p className="text-sm text-muted-foreground mb-4">{item.description}</p>
-                  <div className="flex items-center justify-between">
-                    <span className="font-bold text-primary text-xl">{item.price} €</span>
+                  <div className="flex items-center justify-between mb-4">
+                    <span className="font-bold text-primary text-xl">{item.price} FCFA</span>
                     <Link
                       href="/catalog"
                       className="text-sm font-semibold text-primary hover:text-primary/80 transition-colors underline"
@@ -161,6 +154,7 @@ export default function Home() {
                       Voir détails
                     </Link>
                   </div>
+                  <WhatsAppButton productName={item.name} className="w-full" />
                 </div>
               </motion.div>
             ))}

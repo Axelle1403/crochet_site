@@ -11,6 +11,9 @@ interface CartContextType {
   clearCart: () => void;
   cartTotal: number;
   cartCount: number;
+  showNotification: (message: string) => void;
+  notification: string | null;
+  hideNotification: () => void;
 }
 
 const CartContext = createContext<CartContextType | undefined>(undefined);
@@ -18,6 +21,7 @@ const CartContext = createContext<CartContextType | undefined>(undefined);
 export function CartProvider({ children }: { children: React.ReactNode }) {
   const [cart, setCart] = useState<CartItem[]>([]);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [notification, setNotification] = useState<string | null>(null);
 
   // Load cart from localStorage on mount
   useEffect(() => {
@@ -39,14 +43,27 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
     setCart((prevCart) => {
       const existingItem = prevCart.find((item) => item.id === product.id);
       if (existingItem) {
+        setNotification(`${product.name} ajouté au panier`);
+        setTimeout(() => setNotification(null), 3000);
         return prevCart.map((item) =>
           item.id === product.id
             ? { ...item, quantity: Math.min(item.quantity + 1, product.stock) }
             : item
         );
       }
+      setNotification(`${product.name} ajouté au panier`);
+      setTimeout(() => setNotification(null), 3000);
       return [...prevCart, { ...product, quantity: 1 }];
     });
+  };
+
+  const showNotification = (message: string) => {
+    setNotification(message);
+    setTimeout(() => setNotification(null), 3000);
+  };
+
+  const hideNotification = () => {
+    setNotification(null);
   };
 
   const removeFromCart = (productId: string) => {
@@ -82,6 +99,9 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         clearCart,
         cartTotal,
         cartCount,
+        showNotification,
+        notification,
+        hideNotification,
       }}
     >
       {children}

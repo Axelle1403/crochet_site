@@ -8,7 +8,7 @@ export default function Navigation() {
   const { cartCount } = useCart();
 
   return (
-    <nav className="border-b border-border bg-card">
+    <nav className="border-b border-border bg-background">
       <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="hover:opacity-80 transition-opacity">

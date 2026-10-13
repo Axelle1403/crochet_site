@@ -130,7 +130,7 @@ export default function AdminPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Prix (€) *</label>
+                  <label className="block text-sm font-medium text-foreground mb-2">Prix (FCFA) *</label>
                   <input
                     name="price"
                     type="number"
@@ -210,7 +210,7 @@ export default function AdminPage() {
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-foreground mb-2">Prix (€) *</label>
+                  <label className="block text-sm font-medium text-foreground mb-2">Prix (FCFA) *</label>
                   <input
                     name="price"
                     type="number"
@@ -302,7 +302,7 @@ export default function AdminPage() {
                         </span>
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
-                        {product.price.toFixed(2)} €
+                        {product.price.toFixed(2)} FCFA
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-foreground">
                         {product.stock}

@@ -47,7 +47,7 @@ export default function AboutPage() {
             </div>
             <div className="aspect-square bg-secondary rounded-lg flex items-center justify-center overflow-hidden">
               <img
-                src="https://images.pexels.com/photos/31701717/pexels-photo-31701717/free-photo-fashionable-woman-in-bright-crochet-top.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop"
+                src="/Gr A Ce.jpeg"
                 alt="Créations en crochet"
                 className="w-full h-full object-cover"
               />

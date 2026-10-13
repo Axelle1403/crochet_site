@@ -69,7 +69,7 @@ export default function CartPage() {
                     <div className="flex-1">
                       <h3 className="font-semibold text-foreground mb-1">{item.name}</h3>
                       <p className="text-sm text-muted-foreground mb-2">{item.description}</p>
-                      <p className="font-bold text-foreground">{item.price} €</p>
+                      <p className="font-bold text-foreground">{item.price} FCFA</p>
                     </div>
                     <div className="flex flex-col items-end justify-between">
                       <button
@@ -129,7 +129,7 @@ export default function CartPage() {
                 <div className="space-y-3 mb-6">
                   <div className="flex justify-between text-muted-foreground">
                     <span>Sous-total</span>
-                    <span>{cartTotal.toFixed(2)} €</span>
+                    <span>{cartTotal.toFixed(2)} FCFA</span>
                   </div>
                   <div className="flex justify-between text-muted-foreground">
                     <span>Livraison</span>
@@ -137,7 +137,7 @@ export default function CartPage() {
                   </div>
                   <div className="border-t border-border pt-3 flex justify-between font-bold text-foreground">
                     <span>Total</span>
-                    <span>{cartTotal.toFixed(2)} €</span>
+                    <span>{cartTotal.toFixed(2)} FCFA</span>
                   </div>
                 </div>
 

@@ -7,10 +7,11 @@ import { Product } from '@/types/product';
 import { useCart } from '@/context/CartContext';
 import Logo from '@/components/logo';
 import Footer from '@/components/footer';
+import WhatsAppButton from '@/components/whatsapp-button';
 
 export default function CatalogPage() {
   const [selectedCategory, setSelectedCategory] = useState('all');
-  const { addToCart } = useCart();
+  const { addToCart, notification, hideNotification } = useCart();
 
   const filteredProducts = selectedCategory === 'all' 
     ? products 
@@ -77,7 +78,7 @@ export default function CatalogPage() {
                   <h3 className="font-semibold text-foreground mb-2">{product.name}</h3>
                   <p className="text-sm text-muted-foreground mb-3">{product.description}</p>
                   <div className="flex items-center justify-between mb-3">
-                    <span className="font-bold text-foreground text-lg">{product.price} €</span>
+                    <span className="font-bold text-foreground text-lg">{product.price} FCFA</span>
                     <span className="text-xs text-muted-foreground">
                       {product.stock > 0 ? `${product.stock} en stock` : 'Rupture'}
                     </span>
@@ -85,7 +86,7 @@ export default function CatalogPage() {
                   <button
                     onClick={() => handleAddToCart(product)}
                     disabled={product.stock === 0}
-                    className={`w-full py-2 rounded-full transition-colors ${
+                    className={`w-full py-2 rounded-full transition-colors mb-2 ${
                       product.stock > 0
                         ? 'bg-primary text-primary-foreground hover:bg-primary/90'
                         : 'bg-muted text-muted-foreground cursor-not-allowed'
@@ -93,6 +94,7 @@ export default function CatalogPage() {
                   >
                     {product.stock > 0 ? 'Ajouter au panier' : 'Rupture de stock'}
                   </button>
+                  <WhatsAppButton productName={product.name} className="w-full" />
                 </div>
               </div>
             ))}
@@ -126,6 +128,48 @@ export default function CatalogPage() {
           </a>
         </div>
       </section>
+
+      {/* Notification Popup */}
+      {notification && (
+        <div className="fixed bottom-4 right-4 bg-primary text-primary-foreground px-6 py-3 rounded-lg shadow-lg z-50 animate-in slide-in-from-bottom-5 fade-in duration-300">
+          <div className="flex items-center gap-3">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <polyline points="22 4 12 14.01 9 11.01" />
+            </svg>
+            <span>{notification}</span>
+            <button
+              onClick={hideNotification}
+              className="ml-2 hover:opacity-70"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      )}
 
       <Footer />
     </div>
