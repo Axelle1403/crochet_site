@@ -14,7 +14,7 @@ export default function Navigation() {
           <Link href="/" className="hover:opacity-80 transition-opacity">
             <Logo className="h-10 w-auto" />
           </Link>
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 ml-auto">
             <Link href="/" className="text-foreground hover:text-primary transition-colors">
               Accueil
             </Link>
