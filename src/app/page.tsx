@@ -154,7 +154,12 @@ export default function Home() {
                       Voir détails
                     </Link>
                   </div>
-                  <WhatsAppButton productName={item.name} className="w-full" />
+                  <WhatsAppButton 
+                    productName={item.name} 
+                    productImage={item.image}
+                    productUrl="/catalog"
+                    className="w-full" 
+                  />
                 </div>
               </motion.div>
             ))}

@@ -1,13 +1,34 @@
 interface WhatsAppButtonProps {
   productName?: string;
+  productImage?: string;
+  productUrl?: string;
   className?: string;
 }
 
-export default function WhatsAppButton({ productName, className = '' }: WhatsAppButtonProps) {
+export default function WhatsAppButton({ productName, productImage, productUrl, className = '' }: WhatsAppButtonProps) {
   const phoneNumber = '2290153153517';
-  const message = productName 
-    ? `Bonjour, je suis intéressé par "${productName}". Pouvez-vous me donner plus d'informations ?`
-    : 'Bonjour, je voudrais avoir plus d\'informations sur vos créations en crochet.';
+  
+  let message = 'Bonjour, je voudrais avoir plus d\'informations sur vos créations en crochet.';
+  
+  if (productName) {
+    message = `Bonjour, je suis intéressé par "${productName}".`;
+    
+    // Construire l'URL complète de l'image
+    if (productImage) {
+      const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
+      const fullImageUrl = productImage.startsWith('http') ? productImage : `${baseUrl}${productImage}`;
+      message += `\n\nImage du produit : ${fullImageUrl}`;
+    }
+    
+    // Construire l'URL complète du produit
+    if (productUrl) {
+      const baseUrl = typeof window !== 'undefined' ? window.location.origin : '';
+      const fullProductUrl = productUrl.startsWith('http') ? productUrl : `${baseUrl}${productUrl}`;
+      message += `\n\nLien vers le produit : ${fullProductUrl}`;
+    }
+    
+    message += '\n\nPouvez-vous me donner plus d\'informations ?';
+  }
 
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 

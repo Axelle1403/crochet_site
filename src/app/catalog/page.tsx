@@ -94,7 +94,12 @@ export default function CatalogPage() {
                   >
                     {product.stock > 0 ? 'Ajouter au panier' : 'Rupture de stock'}
                   </button>
-                  <WhatsAppButton productName={product.name} className="w-full" />
+                  <WhatsAppButton 
+                    productName={product.name} 
+                    productImage={product.image}
+                    productUrl="/catalog"
+                    className="w-full" 
+                  />
                 </div>
               </div>
             ))}
